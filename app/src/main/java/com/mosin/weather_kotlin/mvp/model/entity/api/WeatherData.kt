@@ -18,7 +18,7 @@ data class WeatherData(
     @Expose
     val coord: Coord = Coord(),
     @Expose
-    val weather: Array<Weather> ,
+    val weather: Array<Weather> = arrayOf(Weather()),
     @Expose
     val main: Main = Main(),
     @Expose

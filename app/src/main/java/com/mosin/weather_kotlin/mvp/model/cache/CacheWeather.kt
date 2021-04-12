@@ -15,6 +15,7 @@ class CacheWeather(private val db: Database) : ICacheWeather {
                 wd.id,
                 wd.cod,
                 wd.coord,
+                wd.weather,
                 wd.main,
                 wd.wind,
                 wd.clouds,
@@ -45,4 +46,5 @@ class CacheWeather(private val db: Database) : ICacheWeather {
 //            )
 //        }
 //    }
+
 }
