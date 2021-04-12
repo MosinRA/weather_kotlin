@@ -1,6 +1,5 @@
 package com.mosin.weather_kotlin.mvp.model.entity.room
 
-import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -13,8 +12,7 @@ class RoomWeatherData(
     val id: Int,
     val cod: Int,
     @Embedded val coord: Coord,
-    @ColumnInfo(name = "array")
-    val weather: Array<Weather>,
+    @Embedded val weather: Array<Weather>,
     @Embedded val main: Main,
     @Embedded val wind: Wind,
     @Embedded val clouds: Clouds,
