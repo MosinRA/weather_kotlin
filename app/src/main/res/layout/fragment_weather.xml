@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ground">
+
+    <TextView
+        android:id="@+id/city_name_big"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="SURGUT" />
+
+    <TextView
+        android:id="@+id/city_name_small"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintStart_toStartOf="@+id/line"
+        tools:text="Surgut" />
+
+    <TextView
+        android:id="@+id/date_now"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/city_name_small"
+        tools:text="25.12.2020" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_name_big" />
+
+    <ImageView
+        android:id="@+id/weather_ico_view"
+        android:layout_width="140dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/temp_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp_text_view" />
+
+    <TextView
+        android:id="@+id/temp_text_view"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/bebas_neue_regular"
+        android:text=""
+        android:textSize="110sp"
+        app:layout_constraintEnd_toEndOf="@+id/line"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        tools:text="-15" />
+
+    <TextView
+        android:id="@+id/temp_like"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text="Ощущается как:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toStartOf="@+id/temp_like_val"
+        />
+
+    <TextView
+        android:id="@+id/temp_like_val"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="@+id/line2"
+        tools:text="-10" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_text_view" />
+
+    <TextView
+        android:id="@+id/humidity_text"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text="@string/humidity"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/line2"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        />
+
+    <TextView
+        android:id="@+id/humidity_val"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/humidity_text"
+        app:layout_constraintTop_toTopOf="@+id/humidity_text"
+        tools:text="80" />
+
+    <TextView
+        android:id="@+id/pressure_text"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text="@string/pressure"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/humidity_text"
+        app:layout_constraintTop_toBottomOf="@+id/humidity_text"
+        />
+
+    <TextView
+        android:id="@+id/pressure_val"
+        style="@style/MyStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/bebas_neue_light"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/pressure_text"
+        app:layout_constraintTop_toTopOf="@+id/pressure_text"
+        tools:text="992" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
